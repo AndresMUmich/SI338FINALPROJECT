@@ -1,0 +1,14 @@
+:root {
+  --bun: #e5cb7a;
+  --lettuce: #32c704;
+  --patty: #450101;
+  --tomato: #ec3521;
+  --text-dark: #2c1810;
+  --white: #ffffff;
+}
+
+img {
+  width: 240px;
+  height: auto;
+}
+

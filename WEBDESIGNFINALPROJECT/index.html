@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Build Your Own Hamburger</title>
+    <link href="dist/css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="dist/js/lightbox-plus-jquery.js"></script>
+    <script defer src="js/script.js"></script>
+    
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <nav>
+        <h1>Build Your Own Hamburger</h1>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <h2>Create Your Perfect Burger Meal</h2>
+            <p>Choose your ingredients, sides, and drinks to craft the burger of your dreams.</p>
+            <a href="shop.html" class="btn">Start Building</a>
+        </section>
+
+        <section id="about">
+            <h2>Who We Are</h2>
+            <p>
+                placeholder
+            </p>
+
+            <div class="team-gallery" aria-label="Our team photos">
+                <figure>
+                    <a href="images/bobbelcher.jpg" data-lightbox="team" data-title="Bob Belcher — Grillmaster">
+                    <img src="images/bobbelcher.jpg" alt="Bob Belcher — Grillmaster" />
+                    </a>
+                    <figcaption>Bob Belcher<br><small>Grillmaster</small></figcaption>
+                </figure>
+
+                <figure>
+                    <a href="images/bobsponge.jpg" data-lightbox="team" data-title="Sponge Bob — Spatulamaster">
+                    <img src="images/bobsponge.jpg" alt="Sponge Bob — Spatulamaster" />
+                    </a>
+                    <figcaption>Sponge Bob<br><small>Spatulamaster</small></figcaption>
+                </figure>
+
+                <figure>
+                    <a href="images/ronald.jpg" data-lightbox="team" data-title="Ronald McDonald — COO">
+                    <img src="images/ronald.jpg" alt="Ronald McDonald — COO" />
+                    </a>
+                    <figcaption>Ronald McDonald<br><small>COO</small></figcaption>
+                </figure>
+
+                <figure>
+                    <a href="images/santa.jpg" data-lightbox="team" data-title="Santa Klaus — CDO">
+                    <img src="images/santa.jpg" alt="Santa Klaus — CDO" />
+                    </a>
+                    <figcaption>Santa Klaus<br><small>CDO</small></figcaption>
+                </figure>
+            </div>
+
+        </section>
+
+        <section id="features">
+            <h2>Why You’ll Love It</h2>
+            <ul>
+                <li>100% customizable</li>
+                <li>100% organic</li>
+                <li>100% accessible</li>
+            </ul>
+        </section>
+
+        <section id="location">
+            <h2>Where We’re Located</h2>
+            <p>
+                Surrounded by nature we are located at Valle de Cuelgamuros, Spain where with the power of technology we will ensure you get your food delivered to you no matter where you are.
+            </p>
+            <div class="map-container" aria-label="Map showing our location">
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.455584976653!2d-4.158211188471563!3d40.64188669178587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd410a28638894d1%3A0x3aecde28a878958f!2sValle%20de%20Cuelgamuros!5e0!3m2!1ses!2sus!4v1762956590730!5m2!1ses!2sus"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm" action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Type your message here..." required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+        <script src="js/main.js"></script>
+
+        <script>
+            lightbox.option({
+            'fadeDuration': 800,
+            'resizeDuration': 800,
+            'positionFromTop': 10,
+            'wrapAround': true
+            });
+        </script>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Andres Martin | <a href="mailto:maandres@umich.edu">Contact</a></p>
+    </footer>
+</body>
+</html>

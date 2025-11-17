@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | Build Your Burger</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/script.js"></script>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <nav>
+        <h1>Build Your Own Hamburger</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <section id="step-bun" class="builder-step" aria-labelledby="bun-heading">
+        <h2 id="bun-heading">Step 1: Choose Your Bun</h2>
+        <form id="bunForm">
+            <fieldset>
+            <legend>Select a bun type</legend>
+
+            <label>
+                <input type="radio" name="bun" value="Sesame" required />
+                <img src="images/bun-sesame.jpg" alt="Sesame Seed Bun" />
+                <span>Sesame Bun</span>
+            </label>
+
+            <label>
+                <input type="radio" name="bun" value="Brioche" />
+                <img src="images/bun-brioche.jpg" alt="Brioche Bun" />
+                <span>Brioche Bun</span>
+            </label>
+
+            <label>
+                <input type="radio" name="bun" value="Whole Wheat" />
+                <img src="images/bun-wheat.jpg" alt="Whole Wheat Bun" />
+                <span>Whole Wheat Bun</span>
+            </label>
+            </fieldset>
+
+            <button type="button" id="bunNext">Next →</button>
+        </form>
+        </section>
+
+        <section id="step-meat" class="builder-step">
+        <h2>Step 2: Choose Your Patty</h2>
+        <form id="meatForm">
+            <fieldset>
+            <legend>Select your patty</legend>
+
+            <label>
+                <input type="radio" name="meat" value="Beef" required />
+                <img src="images/meat-beef.jpg" alt="Beef Patty" />
+                <span>Beef</span>
+            </label>
+
+            <label>
+                <input type="radio" name="meat" value="Chicken" />
+                <img src="images/meat-chicken.jpg" alt="Chicken Patty" />
+                <span>Chicken</span>
+            </label>
+
+            <label>
+                <input type="radio" name="meat" value="Veggie" />
+                <img src="images/meat-veggie.jpg" alt="Veggie Patty" />
+                <span>Veggie</span>
+            </label>
+            </fieldset>
+
+            <button type="button" id="meatBack">← Back</button>
+            <button type="button" id="meatNext">Next →</button>
+        </form>
+        </section>
+
+        <section id="step-toppings" class="builder-step">
+        <h2>Step 3: Choose Your Toppings (Optional)</h2>
+        <form id="toppingsForm">
+            <fieldset>
+            <legend>Select your toppings</legend>
+
+            <label>
+                <input type="checkbox" value="Lettuce" />
+                <img src="images/topping-lettuce.jpg" alt="Lettuce" />
+                <span>Lettuce</span>
+            </label>
+
+            <label>
+                <input type="checkbox" value="Tomato" />
+                <img src="images/topping-tomato.jpg" alt="Tomato" />
+                <span>Tomato</span>
+            </label>
+
+            <label>
+                <input type="checkbox" value="Cheese" />
+                <img src="images/topping-cheese.jpg" alt="Cheese" />
+                <span>Cheese</span>
+            </label>
+
+            <label>
+                <input type="checkbox" value="Onion" />
+                <img src="images/topping-onion.jpg" alt="Onion" />
+                <span>Onion</span>
+            </label>
+
+            <label>
+                <input type="checkbox" value="Pickles" />
+                <img src="images/topping-pickles.jpg" alt="Pickles" />
+                <span>Pickles</span>
+            </label>
+            </fieldset>
+
+            <button type="button" id="toppingsBack">← Back</button>
+            <button type="button" id="toppingsNext">Next →</button>
+        </form>
+        </section>
+
+        <section id="step-sauces" class="builder-step">
+        <h2>Step 4: Choose Your Sauces (Optional)</h2>
+        <form id="saucesForm">
+            <fieldset>
+            <legend>Select sauces</legend>
+
+            <label>
+                <input type="checkbox" value="Ketchup" />
+                <img src="images/sauce-ketchup.jpg" alt="Ketchup" />
+                <span>Ketchup</span>
+            </label>
+
+            <label>
+                <input type="checkbox" value="Mustard" />
+                <img src="images/sauce-mustard.jpg" alt="Mustard" />
+                <span>Mustard</span>
+            </label>
+
+            <label>
+                <input type="checkbox" value="Mayo" />
+                <img src="images/sauce-mayo.jpg" alt="Mayonnaise" />
+                <span>Mayo</span>
+            </label>
+
+            <label>
+                <input type="checkbox" value="BBQ" />
+                <img src="images/sauce-bbq.jpg" alt="Barbecue Sauce" />
+                <span>BBQ</span>
+            </label>
+            </fieldset>
+
+            <button type="button" id="saucesBack">← Back</button>
+            <button type="button" id="saucesNext">Next →</button>
+        </form>
+        </section>
+
+        <section id="step-side" class="builder-step">
+        <h2>Step 5: Choose Your Side</h2>
+        <form id="sideForm">
+            <fieldset>
+            <legend>Select your side</legend>
+
+            <label>
+                <input type="radio" name="side" value="Fries" required />
+                <img src="images/side-fries.jpg" alt="Fries" />
+                <span>Fries</span>
+            </label>
+
+            <label>
+                <input type="radio" name="side" value="Onion Rings" />
+                <img src="images/side-onionrings.jpg" alt="Onion Rings" />
+                <span>Onion Rings</span>
+            </label>
+
+            <label>
+                <input type="radio" name="side" value="Salad" />
+                <img src="images/side-salad.jpg" alt="Salad" />
+                <span>Salad</span>
+            </label>
+            </fieldset>
+
+            <button type="button" id="sideBack">← Back</button>
+            <button type="button" id="sideNext">Next →</button>
+        </form>
+        </section>
+
+        <section id="step-drink" class="builder-step">
+        <h2>Step 6: Choose Your Drink</h2>
+        <form id="drinkForm">
+            <fieldset>
+            <legend>Select your drink</legend>
+
+            <label>
+                <input type="radio" name="drink" value="Cola" required />
+                <img src="images/drink-cola.jpg" alt="Cola" />
+                <span>Cola</span>
+            </label>
+
+            <label>
+                <input type="radio" name="drink" value="Lemonade" />
+                <img src="images/drink-lemonade.jpg" alt="Lemonade" />
+                <span>Lemonade</span>
+            </label>
+
+            <label>
+                <input type="radio" name="drink" value="Water" />
+                <img src="images/drink-water.jpg" alt="Water" />
+                <span>Water</span>
+            </label>
+            </fieldset>
+
+            <button type="button" id="drinkBack">← Back</button>
+            <button type="button" id="drinkNext">Next →</button>
+        </form>
+        </section>
+
+        <section id="step-summary" class="builder-step" aria-live="polite">
+        <h2>Step 7: Summary</h2>
+        <div id="summaryContent">
+            <p>Your burger selections will appear here.</p>
+        </div>
+        <button type="button" id="summaryBack">← Back</button>
+        <button type="button" id="addToCart">Add to Cart</button>
+        </section>
+    </main>
+
+  <footer>
+    <p>&copy; 2025 Andres Martin</p>
+  </footer>
+</body>
+</html>
