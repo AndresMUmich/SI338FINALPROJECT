@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shop | Build Your Burger</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <script defer src="js/script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop | Build Your Burger</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="js/script.js"></script>
 </head>
 
 <body>
@@ -17,9 +18,33 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="shop.html" class="active">Shop</a></li>
             <li><a href="checkout.html">Checkout</a></li>
+            <li><button id="openCart" aria-haspopup="dialog" aria-controls="cartDrawer">Cart (<span id="cartCount">0</span>)</button></li>
         </ul>
         </nav>
     </header>
+
+    <aside id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
+        <div class="cart-content">
+            <header class="cart-header">
+            <h3 id="cartTitle">Your Cart</h3>
+            <button id="closeCart" aria-label="Close cart">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+            </header>
+
+            <div id="cartItems" class="cart-items">
+            <p>Your cart is empty.</p>
+            </div>
+
+            <footer class="cart-footer">
+                <button id="clearCart">Clear Cart</button>
+                <a href="checkout.html" class="go-checkout">Go to Checkout</a>
+            </footer>
+        </div>
+    </aside>
 
     <main id="main-content">
 
@@ -48,11 +73,11 @@
             </label>
             </fieldset>
 
-            <button type="button" id="bunNext">Next →</button>
+            <button type="button" id="bunNext" disabled>Next →</button>
         </form>
         </section>
 
-        <section id="step-meat" class="builder-step">
+        <section id="step-meat" class="builder-step" hidden>
         <h2>Step 2: Choose Your Patty</h2>
         <form id="meatForm">
             <fieldset>
@@ -78,11 +103,11 @@
             </fieldset>
 
             <button type="button" id="meatBack">← Back</button>
-            <button type="button" id="meatNext">Next →</button>
+            <button type="button" id="meatNext" disabled>Next →</button>
         </form>
         </section>
 
-        <section id="step-toppings" class="builder-step">
+        <section id="step-toppings" class="builder-step" hidden>
         <h2>Step 3: Choose Your Toppings (Optional)</h2>
         <form id="toppingsForm">
             <fieldset>
@@ -124,7 +149,7 @@
         </form>
         </section>
 
-        <section id="step-sauces" class="builder-step">
+        <section id="step-sauces" class="builder-step" hidden>
         <h2>Step 4: Choose Your Sauces (Optional)</h2>
         <form id="saucesForm">
             <fieldset>
@@ -160,7 +185,7 @@
         </form>
         </section>
 
-        <section id="step-side" class="builder-step">
+        <section id="step-side" class="builder-step" hidden>
         <h2>Step 5: Choose Your Side</h2>
         <form id="sideForm">
             <fieldset>
@@ -186,11 +211,11 @@
             </fieldset>
 
             <button type="button" id="sideBack">← Back</button>
-            <button type="button" id="sideNext">Next →</button>
+            <button type="button" id="sideNext" disabled>Next →</button>
         </form>
         </section>
 
-        <section id="step-drink" class="builder-step">
+        <section id="step-drink" class="builder-step" hidden>
         <h2>Step 6: Choose Your Drink</h2>
         <form id="drinkForm">
             <fieldset>
@@ -216,11 +241,11 @@
             </fieldset>
 
             <button type="button" id="drinkBack">← Back</button>
-            <button type="button" id="drinkNext">Next →</button>
+            <button type="button" id="drinkNext" disabled>Next →</button>
         </form>
         </section>
 
-        <section id="step-summary" class="builder-step" aria-live="polite">
+        <section id="step-summary" class="builder-step" hidden aria-live="polite">
         <h2>Step 7: Summary</h2>
         <div id="summaryContent">
             <p>Your burger selections will appear here.</p>
