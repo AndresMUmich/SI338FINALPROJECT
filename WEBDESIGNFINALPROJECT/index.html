@@ -6,6 +6,7 @@
     <title>Home | Build Your Own Hamburger</title>
     <link href="dist/css/lightbox.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="dist/js/lightbox-plus-jquery.js"></script>
     <script defer src="js/script.js"></script>
     
@@ -20,9 +21,32 @@
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="checkout.html">Checkout</a></li>
+            <li><button id="openCart" aria-haspopup="dialog" aria-controls="cartDrawer">Cart (<span id="cartCount">0</span>)</button></li>
         </ul>
         </nav>
     </header>
+    <aside id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
+        <div class="cart-content">
+            <header class="cart-header">
+            <h3 id="cartTitle">Your Cart</h3>
+            <button id="closeCart" aria-label="Close cart">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+            </header>
+
+            <div id="cartItems" class="cart-items">
+            <p>Your cart is empty.</p>
+            </div>
+
+            <footer class="cart-footer">
+            <button id="clearCart">Clear Cart</button>
+            <a href="checkout.html" class="go-checkout">Go to Checkout</a>
+            </footer>
+        </div>
+    </aside>
 
     <main id="main-content">
         <section class="hero">
@@ -34,7 +58,7 @@
         <section id="about">
             <h2>Who We Are</h2>
             <p>
-                placeholder
+                We are a team of passionate burger enthusiasts that are willing to dedicate their life so you can get the best hamburger EVER.
             </p>
 
             <div class="team-gallery" aria-label="Our team photos">
